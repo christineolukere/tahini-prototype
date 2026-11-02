@@ -1,0 +1,148 @@
+/* Visit Taniti prototype: shared styles for every page. Tokens match Visit Taniti.html. */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap");
+
+:root{
+  --bg:#f1f6f4; --surface:#ffffff; --ink:#0e2a2c; --muted:#47625f; --line:#d2e0dc;
+  --lagoon:#0a6b75; --lagoon-ink:#ffffff; --leaf:#f0b400; --leaf-ink:#2b2000;
+  --tint:#e0efec; --warn-bg:#fff2c2; --warn-ink:#4a3700;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Public Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0a1a1b; --surface:#12292b; --ink:#e7f2f0; --muted:#9fbab7; --line:#264240;
+    --lagoon:#4cc3cc; --lagoon-ink:#04191b; --leaf:#f5c230; --leaf-ink:#2b2000;
+    --tint:#173638; --warn-bg:#3b3009; --warn-ink:#ffe9a6; color-scheme:dark;
+  }
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  display:flex;flex-direction:column;min-height:100vh}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0;letter-spacing:-.01em}
+h1{font-size:2.2rem} h2{font-size:1.45rem} h3{font-size:1.1rem}
+p{margin:0}
+a{color:var(--lagoon)}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px;width:100%}
+
+/* Prototype banner */
+.proto{background:var(--leaf);color:var(--leaf-ink);font-size:.8rem;font-weight:600;padding:6px 12px;text-align:center}
+
+/* Header: logo + Menu on phones, full nav on desktop */
+header.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px;position:relative}
+.brand{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px}
+.brand .logo{width:26px;height:26px;border-radius:50%;background:var(--leaf);display:inline-block;position:relative;overflow:hidden}
+.brand .logo::after{content:"";position:absolute;left:4px;right:4px;top:11px;height:14px;border:2.4px solid var(--lagoon);border-bottom:0;border-radius:50% 50% 0 0}
+nav.desk{display:none;gap:4px}
+nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-weight:500;font-size:.92rem}
+nav a[aria-current="page"]{background:var(--tint);color:var(--lagoon);font-weight:600}
+details.menu summary{list-style:none;cursor:pointer;border:1.5px solid var(--line);border-radius:8px;padding:8px 14px;font-weight:600;font-size:.9rem;min-height:44px;display:flex;align-items:center}
+details.menu summary::-webkit-details-marker{display:none}
+details.menu nav{position:absolute;right:16px;top:100%;margin-top:6px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;min-width:220px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+
+/* Main column */
+main{flex:1;padding-block:20px 32px}
+main .wrap{display:flex;flex-direction:column;gap:20px}
+.crumb{font-size:.88rem;color:var(--muted)}
+.lede{color:var(--muted);max-width:62ch}
+.muted{color:var(--muted)} .small{font-size:.88rem}
+
+/* Cards and grids */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+.grid.two{grid-template-columns:1fr 1fr}
+.tile{text-decoration:none;color:var(--ink);min-height:96px;justify-content:flex-end;font-weight:600}
+.tile:hover{border-color:var(--lagoon)}
+.tile span{font-weight:400;color:var(--muted);font-size:.85rem}
+
+/* Media card: photo placeholder beside text */
+.media{flex-direction:row;align-items:flex-start;gap:14px}
+.photo{flex:0 0 96px;height:80px;border-radius:10px;background:var(--tint);color:var(--muted);font-size:.8rem;display:flex;align-items:center;justify-content:center;text-align:center}
+.map{min-height:180px;border-radius:14px;background:var(--tint);color:var(--muted);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:.9rem;border:1px solid var(--line)}
+.hero-art{width:100%;height:auto;max-height:240px;border-radius:14px;background:var(--tint);display:block}
+
+/* Chips (filters and tab links) */
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:.9rem;font-weight:500;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.chip.on{background:var(--lagoon);color:var(--lagoon-ink);border-color:var(--lagoon);font-weight:600}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tabs .chip{border-radius:10px;justify-content:center}
+
+/* CSS-only tabs and filters: a visually hidden radio followed by its label styled as a chip */
+.pick{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+label.chip{cursor:pointer;flex-direction:row;font-size:.9rem;font-weight:500}
+.pick:checked + .chip{background:var(--lagoon);color:var(--lagoon-ink);border-color:var(--lagoon);font-weight:600}
+.pick:focus-visible + .chip{outline:3px solid var(--leaf);outline-offset:2px}
+
+/* Getting around: :target tabs so the home page can link straight to #air */
+main:not(:has(#air:target)) #air,
+main:has(#air:target) #cruise{display:none}
+main:not(:has(#air:target)) .arrive a[href="#cruise"],
+main:has(#air:target) .arrive a[href="#air"]{background:var(--lagoon);color:var(--lagoon-ink);border-color:var(--lagoon);font-weight:600}
+
+/* Things to do filters */
+main:has(#f-fam:checked) .item:not(.f-fam),
+main:has(#f-beach:checked) .item:not(.f-beach),
+main:has(#f-rain:checked) .item:not(.f-rain),
+main:has(#f-volc:checked) .item:not(.f-volc),
+main:has(#f-short:checked) .item:not(.f-short){display:none}
+
+/* Itinerary length */
+main:has(#d2:checked) .plan:not(#plan2),
+main:has(#d5:checked) .plan:not(#plan5),
+main:has(#dc:checked) .plan:not(#planc){display:none}
+
+/* Stay and eat: tabs, lodging filters, cuisine filters */
+main:has(#s-lodge:checked) .panel:not(#lodging),
+main:has(#s-dine:checked) .panel:not(#dining),
+main:has(#s-groc:checked) .panel:not(#groceries){display:none}
+main:has(#l-hotel:checked) .room:not(.l-hotel),
+main:has(#l-bb:checked) .room:not(.l-bb),
+main:has(#l-family:checked) .room:not(.l-family){display:none}
+main:has(#c-local:checked) .meal:not(.c-local),
+main:has(#c-amer:checked) .meal:not(.c-amer),
+main:has(#c-asian:checked) .meal:not(.c-asian){display:none}
+
+/* Buttons */
+.btn{display:flex;align-items:center;justify-content:center;border:0;background:var(--lagoon);color:var(--lagoon-ink);border-radius:10px;padding:12px 18px;font:inherit;font-weight:600;text-decoration:none;min-height:48px;text-align:center}
+.btn.alt{background:transparent;color:var(--lagoon);border:1.5px solid var(--lagoon)}
+.actions{display:flex;flex-direction:column;gap:12px}
+
+/* Notices */
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:12px 14px;font-size:.9rem}
+.badge{display:inline-block;align-self:flex-start;font-size:.74rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--leaf);color:var(--leaf-ink)}
+
+/* Itinerary slots */
+.slot{display:grid;grid-template-columns:96px 1fr;gap:10px}
+.slot .when{background:var(--tint);border-radius:10px;padding:10px;text-align:center;font-size:.8rem;font-weight:600;color:var(--lagoon);display:flex;align-items:center;justify-content:center}
+section[id]{scroll-margin-top:80px}
+
+/* Accordions */
+details.card summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:32px}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary::after{content:"+";font-size:1.3rem;color:var(--lagoon)}
+details.card[open] summary::after{content:"\2212"}
+
+/* Search field */
+label{font-weight:600;font-size:.9rem;display:flex;flex-direction:column;gap:6px}
+input{font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;min-height:46px;width:100%}
+
+/* Footer */
+footer{background:var(--surface);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;padding-block:16px;font-size:.88rem}
+footer a{color:var(--ink)}
+
+@media (min-width:760px){
+  details.menu{display:none}
+  nav.desk{display:flex}
+  h1{font-size:3rem}
+  .grid.three{grid-template-columns:repeat(3,1fr)}
+  .grid.c2{grid-template-columns:1fr 1fr}
+  .actions{flex-direction:row}
+  .actions .btn{flex:1}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+}

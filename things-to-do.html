@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Things to Do · Visit Taniti</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="proto">Prototype for D479. Names, hours and prices are placeholders.</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="home.html"><span class="logo" aria-hidden="true"></span>Visit Taniti</a>
+    <nav class="desk" aria-label="Main">
+      <a href="getting-around.html">Getting around</a>
+      <a href="things-to-do.html" aria-current="page">Things to do</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="stay-eat.html">Stay and eat</a>
+      <a href="before-you-go.html">Before you go</a>
+    </nav>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main">
+        <a href="home.html">Home</a>
+        <a href="getting-around.html">Getting around</a>
+        <a href="things-to-do.html" aria-current="page">Things to do</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="stay-eat.html">Stay and eat</a>
+        <a href="before-you-go.html">Before you go</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="crumb"><a href="home.html">Home</a> / Things to do</p>
+    <h1>Things to do</h1>
+
+    <fieldset class="chips" style="border:0;padding:0;margin:0">
+      <legend class="small muted" style="margin-bottom:8px">Show activities</legend>
+      <input class="pick" type="radio" name="filter" id="f-fam" checked><label class="chip" for="f-fam">Family friendly</label>
+      <input class="pick" type="radio" name="filter" id="f-beach"><label class="chip" for="f-beach">Beaches</label>
+      <input class="pick" type="radio" name="filter" id="f-rain"><label class="chip" for="f-rain">Rainforest</label>
+      <input class="pick" type="radio" name="filter" id="f-volc"><label class="chip" for="f-volc">Volcano</label>
+      <input class="pick" type="radio" name="filter" id="f-short"><label class="chip" for="f-short">Under 2 hours</label>
+    </fieldset>
+
+    <div class="grid c2">
+      <article class="card media item f-fam f-beach f-short">
+        <div class="photo">Photo</div>
+        <div><h3>Yellow Leaf Bay beaches</h3><p class="small">Taniti City. Free. Open daily.</p></div>
+      </article>
+      <article class="card media item f-fam f-beach">
+        <div class="photo">Photo</div>
+        <div><h3>Snorkeling</h3><p class="small">Reef trips from Taniti City. Age rules placeholder.</p></div>
+      </article>
+      <article class="card media item f-fam f-rain">
+        <div class="photo">Photo</div>
+        <div><h3>Rainforest hike or zip-line</h3><p class="small">Half day. Hours and age rules placeholder.</p></div>
+      </article>
+      <article class="card media item f-fam f-volc">
+        <div class="photo">Photo</div>
+        <div><h3>Active volcano visit</h3><p class="small">Tour or bus. Closed on some holidays.</p></div>
+      </article>
+      <article class="card media item f-fam f-short">
+        <div class="photo">Photo</div>
+        <div><h3>Merriton Landing</h3><p class="small">Museum, arcade, bowling, snorkeling.</p></div>
+      </article>
+      <article class="card media item f-short">
+        <div class="photo">Photo</div>
+        <div><h3>Pubs and microbrewery</h3><p class="small">Merriton Landing. 18+. No alcohol served midnight to 9 a.m.</p></div>
+      </article>
+    </div>
+
+    <div class="actions">
+      <a class="btn" href="itinerary.html">Next: build a family itinerary</a>
+      <a class="btn alt" href="getting-around.html">Back</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#">Contact</a>
+    <a href="#">Language</a>
+    <a href="#">Accessibility</a>
+  </div>
+</footer>
+</body>
+</html>

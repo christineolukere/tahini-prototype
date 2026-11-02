@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stay and Eat · Visit Taniti</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="proto">Prototype for D479. Names, hours and prices are placeholders.</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="home.html"><span class="logo" aria-hidden="true"></span>Visit Taniti</a>
+    <nav class="desk" aria-label="Main">
+      <a href="getting-around.html">Getting around</a>
+      <a href="things-to-do.html">Things to do</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="stay-eat.html" aria-current="page">Stay and eat</a>
+      <a href="before-you-go.html">Before you go</a>
+    </nav>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main">
+        <a href="home.html">Home</a>
+        <a href="getting-around.html">Getting around</a>
+        <a href="things-to-do.html">Things to do</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="stay-eat.html" aria-current="page">Stay and eat</a>
+        <a href="before-you-go.html">Before you go</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="crumb"><a href="home.html">Home</a> / Stay and eat</p>
+    <h1>Stay and eat</h1>
+
+    <fieldset class="tabs" style="border:0;padding:0;margin:0">
+      <legend class="small muted" style="margin-bottom:8px">Show</legend>
+      <input class="pick" type="radio" name="tab" id="s-lodge" checked><label class="chip" for="s-lodge">Lodging</label>
+      <input class="pick" type="radio" name="tab" id="s-dine"><label class="chip" for="s-dine">Dining</label>
+      <input class="pick" type="radio" name="tab" id="s-groc"><label class="chip" for="s-groc">Groceries</label>
+    </fieldset>
+
+    <section id="lodging" class="grid panel">
+      <fieldset class="chips" style="border:0;padding:0;margin:0">
+        <legend class="small muted" style="margin-bottom:8px">Lodging type</legend>
+        <input class="pick" type="radio" name="lodge" id="l-near" checked><label class="chip" for="l-near">Near my itinerary</label>
+        <input class="pick" type="radio" name="lodge" id="l-hotel"><label class="chip" for="l-hotel">Hotel</label>
+        <input class="pick" type="radio" name="lodge" id="l-bb"><label class="chip" for="l-bb">Bed and breakfast</label>
+        <input class="pick" type="radio" name="lodge" id="l-family"><label class="chip" for="l-family">Family rooms</label>
+      </fieldset>
+      <div class="grid c2">
+        <article class="card media room l-hotel l-family"><div class="photo">Photo</div><div><h3>Resort, four-star</h3><p class="small">Price range and family amenities placeholder</p></div></article>
+        <article class="card media room l-hotel l-family"><div class="photo">Photo</div><div><h3>Family-owned hotel</h3><p class="small">Near Taniti City beaches</p></div></article>
+        <article class="card media room l-bb"><div class="photo">Photo</div><div><h3>Bed and breakfast</h3><p class="small">Government inspected</p></div></article>
+        <article class="card media room"><div class="photo">Photo</div><div><h3>Hostel</h3><p class="small">Lowest-cost option on the island</p></div></article>
+      </div>
+      <div class="warn">All lodging in Taniti is regulated and regularly inspected by the Tanitian government.</div>
+    </section>
+
+    <section id="dining" class="grid panel">
+      <fieldset class="chips" style="border:0;padding:0;margin:0">
+        <legend class="small muted" style="margin-bottom:8px">Cuisine</legend>
+        <input class="pick" type="radio" name="cuisine" id="c-local" checked><label class="chip" for="c-local">Local fish and rice</label>
+        <input class="pick" type="radio" name="cuisine" id="c-amer"><label class="chip" for="c-amer">American-style</label>
+        <input class="pick" type="radio" name="cuisine" id="c-asian"><label class="chip" for="c-asian">Pan-Asian</label>
+      </fieldset>
+      <div class="grid c2">
+        <article class="card media meal c-local"><div class="photo">Photo</div><div><h3>Local fish and rice</h3><p class="small">5 restaurants. Names and hours placeholder.</p></div></article>
+        <article class="card media meal c-amer"><div class="photo">Photo</div><div><h3>American-style</h3><p class="small">3 restaurants. Good for picky eaters.</p></div></article>
+        <article class="card media meal c-asian"><div class="photo">Photo</div><div><h3>Pan-Asian</h3><p class="small">2 restaurants. Names and hours placeholder.</p></div></article>
+      </div>
+      <div class="warn">Many restaurants close or shorten hours on national holidays.</div>
+    </section>
+
+    <section id="groceries" class="grid panel">
+      <div class="grid c2">
+        <div class="card"><span class="badge">Open 24 hours</span><h3>Convenience store</h3><p class="small">One on the island. Handy after a late arrival.</p></div>
+        <div class="card"><h3>Supermarkets</h3><p class="small">Two on the island. Locations placeholder.</p></div>
+        <div class="card"><h3>Smaller grocery stores</h3><p class="small">Two on the island. Locations placeholder.</p></div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <a class="btn" href="before-you-go.html">Next: before you go</a>
+      <a class="btn alt" href="itinerary.html">Back</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#">Contact</a>
+    <a href="#">Language</a>
+    <a href="#">Accessibility</a>
+  </div>
+</footer>
+</body>
+</html>
